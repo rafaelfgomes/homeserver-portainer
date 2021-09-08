@@ -1,0 +1,18 @@
+version: '3'
+
+services: 
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer-service
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    networks:
+      server-network:
+        ipv4_address: 172.40.0.5
+
+networks:
+    server-network:
+        external: true
+        name: server-containers
