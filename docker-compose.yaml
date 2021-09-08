@@ -12,6 +12,9 @@ services:
       server-network:
         ipv4_address: 172.40.0.5
 
+volumes: 
+  data:
+
 networks:
     server-network:
         external: true
