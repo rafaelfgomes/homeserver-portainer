@@ -10,6 +10,8 @@ services:
     restart: always
     networks:
       net:
+    ports:
+      - 9500:9000
 
 volumes: 
   data:
